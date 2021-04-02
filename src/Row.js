@@ -13,7 +13,7 @@ function Row({title, fetchUrl}) {
         }
         fetchData();
 
-    }, [fetchUrl]);
+    }, [fetchUrl]); 
 
     console.table(movies);
     return (
@@ -22,7 +22,7 @@ function Row({title, fetchUrl}) {
             <div className= "row__posters">
                 {/* several row_poster()*/}
             
-                {movies.map(movie => (<img src={'${base_url}${movie.poster_path}'} alt={movie.name}/>) )}
+                {movies.map(movie => (<img src={`${base_url}${movie.poster_path}`} alt={movie.name}/>) )}
             </div>
         </div>
     )
